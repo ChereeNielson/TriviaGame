@@ -4,10 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <title>Trivia Game</title>
 </head>
+
 <body>
+        <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <h1>Trivial Movie Trivia!</h1>
+
+    <div id="container1">
+
+        <div id="button">
+          <button id="start">Start</button>
+        </div>
+  
+ 
+        <div id="container2">
+            
+            <p>Time Remaining: <span id="timeRemaining"></span></p>
+      
+                
+
+            <fieldset>
+                <legend>What is Indiana Jones' real first name?</legend>
+                <input type="radio" name="first-name" id="name" value="indy" /><label for="name">Indy</label><br />
+                <input type="radio" name="first-name" id="name" value="junior" /><label for="name">Junior</label><br />
+                <input type="radio" name="first-name" id="name" value="henry" /><label for="name">Henry</label><br />
+                <input type="radio" name="first-name" id="name" value="marcus" /><label for="name">Marcus</label><br />
+            </fieldset>
+
+            <fieldset>
+                <legend>What actor played the villain in the 1994 movie <i>Speed</i>?</legend>
+                <input type="radio" name="villain" id="name" value="keanu reeves" /><label for="name">Keanu Reeves</label><br />
+                <input type="radio" name="villain" id="name" value="dennis hopper" /><label for="name">Dennis Hopper</label><br />
+                <input type="radio" name="villain" id="name" value="howard payne" /><label for="name">Howard Payne</label><br />
+                <input type="radio" name="villain" id="name" value="jeff daniels" /><label for="name">Jeff Daniels</label><br />
+            </fieldset>
+
+            <fieldset>
+                <legend>How many people were killed in the 1996 movie <i>Scream</i>?</legend>
+                <input type="radio" name="first-name" id="name" value="seven" /><label for="name">Seven</label><br />
+                <input type="radio" name="first-name" id="name" value="nine" /><label for="name">Nine</label><br />
+                <input type="radio" name="first-name" id="name" value="six" /><label for="name">Six</label><br />
+                <input type="radio" name="first-name" id="name" value="five" /><label for="name">Five</label><br />
+            </fieldset>
+
+            <fieldset>
+                <legend>Which of these "I am Jack" lines is NOT uttered by the Narrator in the 1999 movie <i>Fight Club</i>?</legend>
+                <input type="radio" name="first-name" id="name" value="heart" /><label for="name">"I am Jack's broken heart."</label><br />
+                <input type="radio" name="first-name" id="name" value="rejection" /><label for="name">"I am Jack's enflamed sense of rejection."</label><br />
+                <input type="radio" name="first-name" id="name" value="life" /><label for="name">"I am Jack's wasted life."</label><br />
+                <input type="radio" name="first-name" id="name" value="remorse" /><label for="name">"I am Jack's complete lack of remorse."</label><br />
+            </fieldset>
+
+            <fieldset>
+                <legend>Who told Chunk to do the "Truffle Shuffle" in the 1985 movie <i>The Goonies</i>?</legend>
+                <input type="radio" name="first-name" id="name" value="brand" /><label for="name">Brand</label><br />
+                <input type="radio" name="first-name" id="name" value="mikey" /><label for="name">Mikey</label><br />
+                <input type="radio" name="first-name" id="name" value="data" /><label for="name">Data</label><br />
+                <input type="radio" name="first-name" id="name" value="mouth" /><label for="name">Mouth</label><br />
+            </fieldset>
+
+            <fieldset>
+                <legend>Which 80s movie was the highest grossing film of the decade?</legend>
+                <input type="radio" name="first-name" id="name" value="jedi" /><label for="name">Return of the Jedi</label><br />
+                <input type="radio" name="first-name" id="name" value="et" /><label for="name">E.T. <i>The Extraterrestrial</i></label><br />
+                <input type="radio" name="first-name" id="name" value="ghostbusters" /><label for="name">Ghostbusters</label><br />
+                <input type="radio" name="first-name" id="name" value="batman" /><label for="name">Batman</label><br />
+            </fieldset>
+
+            <fieldset>
+                <legend>Who is Keyser Soze in the movie The <i>Usual Suspects</i>?</legend>
+                <input type="radio" name="first-name" id="name" value="keaton" /><label for="name">Dean Keaton</label><br />
+                <input type="radio" name="first-name" id="name" value="mcmanus" /><label for="name">Michael Mcmanus</label><br />
+                <input type="radio" name="first-name" id="name" value="verbal" /><label for="name">Roger “Verbal” Kint</label><br />
+                <input type="radio" name="first-name" id="name" value="mouth" /><label for="name">Mouth</label><br />
+            </fieldset>
+
+            <button id="submit">Get Results</button>
+        </div>
+      
+        <div id="results">
+            <h2>All Done!</h2>
+            <p>Correct Answers: <span id="correctAnswers"></span></p>
+            <p>Incorrect Answers: <span id="incorrectAnswers"></span></p>
+            <p>Unanswered: <span id="unanswered"></span></p>
+        </div>
+
+    </div>
     
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     
     <script src="assets/javascript/app.js"></script>
 </body>

@@ -1,0 +1,67 @@
+body {
+    background: url("../images/box-office-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#container1 {
+    height: 75%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    overflow: hidden;
+}
+
+#container2 {
+    height: 75%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 80px;
+    font-family: 'Francois One', sans-serif;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    text-align: center;
+}
+
+#buttons {
+
+}
+
+fieldset {
+    font-size: 15px;
+    color: #fff;
+}
+
+#quiz {
+    font: #fff;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+}
+
+#submit {
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Francois One', sans-serif;
+    color: #fff;
+}
+
+#results {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+p {
+    font: #fff;
+}
