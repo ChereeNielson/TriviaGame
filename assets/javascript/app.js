@@ -40,8 +40,26 @@ function ready(){
         },
 
         {
-            question: "Who is Keyser Soze in the movie The <i>Usual Suspects</i>?",
+            question: "Who is Keyser Soze in the movie <i>The Usual Suspects</i>?",
             choices: ["Dean Keaton", "Michael Mcmanus", "Roger \“Verbal\” Kint", "Fred Fenster"],
+            answer: 2
+        },
+
+        {
+            question: "In <i>Signs</i>, what does Mel Gibson tell Joaquin Phoenix when they’re confronting the alien?",
+            choices: ["\"Swing away.\"", "\"RUN!\"", "\"Hold still. They don’t see you if you don’t move.\"", "\"Grab the gun.\""],
+            answer: 0
+        }, 
+
+        {
+            question: "In <i>The Big Lebowski</i>, what ties the Dude's room together?",
+            choices: ["the lamp", "the rug", "the ottoman", "the chair"],
+            answer: 1
+        },
+
+        {
+            question: "What is Edward grilling at the neighborhood barbeque in the movie <i>Edward Scissorhands</i>?",
+            choices: ["steak", "ribs", "shish kebobs", "burgers"],
             answer: 2
         }
     ];

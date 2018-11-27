@@ -1,5 +1,5 @@
 body {
-    background: url("../images/box-office-2.jpg");
+    background: url("../images/seating.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -22,7 +22,7 @@ body {
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 5vw;
     font-family: 'Francois One', sans-serif;
     color: #fff;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
@@ -35,6 +35,7 @@ h1 {
 
 fieldset {
     font-size: 15px;
+    font-family: 'Francois One', sans-serif;
     color: #fff;
 }
 
