@@ -9,14 +9,14 @@ body {
     display: none;
  }
 
-#container1 {
+#bodyContainer {
     height: 75%;
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
 }
 
-#container2 {
+#triviaContainer {
     height: 75%;
     width: 60%;
     margin-left: 20%;
@@ -36,8 +36,12 @@ h1 {
     margin-top: 0;
 }
 
-#buttons {
-
+#startButton {
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 2vw;
+    font-family: 'Francois One', sans-serif;
+    color: #ff0080;
 }
 
 fieldset {
@@ -58,6 +62,12 @@ button {
 
 #submit {
     margin-top: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 1.3vw;
+    font-family: 'Francois One', sans-serif;
+    color: #ff0080;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
 }
 
 h2 {

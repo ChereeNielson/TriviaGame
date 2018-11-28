@@ -1,8 +1,6 @@
-$(ready);
+$(document).ready(function () {
 
-function ready(){
-    let allQuestions = 
-    [
+    let allQuestions = [
         {
             question: "What is Indiana Jones' real first name?",
             choices: ["Indy", "Junior", "Henry", "Marcus"],
@@ -64,6 +62,11 @@ function ready(){
         }
     ];
 
+    // Variables that connect to their $Counterparts
+    let timer = $("#timer");
+    let startButton = $("#startButton");
+
+    // Variables for score 
     let score = 0;
     let number = 0;
     let question = $("#question");
@@ -73,7 +76,7 @@ function ready(){
     let choice4 = $("#answer3");
     let next = $("#next");
     let back = $("back");
-    
+
 
 }
 
