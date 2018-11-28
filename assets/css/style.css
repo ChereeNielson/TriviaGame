@@ -2,23 +2,26 @@ body {
     background: url("../images/seating.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    background-attachment: fixed;
 }
+
+::-webkit-scrollbar {
+    display: none;
+ }
 
 #container1 {
     height: 75%;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-    overflow: hidden;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 #container2 {
     height: 75%;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-    overflow-y: auto;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
 }
 
 h1 {
@@ -26,7 +29,11 @@ h1 {
     font-family: 'Francois One', sans-serif;
     color: #fff;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    position: fixed;
     text-align: center;
+    margin-left: 29%;
+    margin-right: 29%;
+    margin-top: 0;
 }
 
 #buttons {
@@ -37,6 +44,7 @@ fieldset {
     font-size: 15px;
     font-family: 'Francois One', sans-serif;
     color: #fff;
+    
 }
 
 #quiz {
@@ -56,6 +64,7 @@ h2 {
     font-size: 30px;
     font-family: 'Francois One', sans-serif;
     color: #fff;
+    margin-left: 0;
 }
 
 #results {

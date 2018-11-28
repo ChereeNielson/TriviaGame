@@ -67,13 +67,38 @@ function ready(){
     let score = 0;
     let number = 0;
     let question = $("#question");
+    let choice1 = $("#answer0");
+    let choice2 = $("#answer1");
+    let choice3 = $("#answer2");
+    let choice4 = $("#answer3");
+    let next = $("#next");
+    let back = $("back");
+    
 
 }
 
+$("#startBtn").click(function() {
+    if (isGameStarted === false) {
+      isGameStarted = true;
+      timer.show();
+      question.show();
+      choice1.show();
+      choice2.show();
+      choice3.show();
+      choice4.show();
+      startBtn.hide();
+      run();
+      populate();
+
+      if (seconds >= 1) {
+        console.log("the game is still going");
+      }
+    }
 
 
 
-let timeoutId = window.setTimeout(function() {
+
+    let timeoutId = window.setTimeout(function() {
 
     $("#start").click(stopwatch.start);
   };
