@@ -62,27 +62,26 @@ $(document).ready(function () {
         }
     ];
 
-    // Variables that connect to their $Counterparts //
-    let timer = $("#timer");
-    let startButton = $("#startButton");
-
-    // Variables for score 
-    let score = 0;
-    let number = 0;
-    let question = $("#question");
-    let choice1 = $("#answer0");
-    let choice2 = $("#answer1");
-    let choice3 = $("#answer2");
-    let choice4 = $("#answer3");
-    let next = $("#next");
-    let back = $("back");
-    let correctAnswer = 0;
-    let wrongAnswer = 0;
+    
+    // Variables that connect to their $("#counterparts") //
+    // let start = $("#startButton");
+    // let timer = $("#timeRemaining")
+    // let submit = $("#submit");
+    // // let restart = $("#buttonRestart");
+    // let questions = $("#question")
+    // let results = $("#results")
+    // let quiz = $("#triviaContainer")
+    let correct = 0;
+    let wrong = 0;
+    // let correctAnswer = 0;
+    // let wrongAnswer = 0;
     let unanswered = 0;
 
-
+    
+    
+    // Create a 1 minute countdown timer //
     function beginTimer() {
-        let seconds = 121;
+        let seconds = 61;
         setInterval(function() {
             seconds--;
             if (seconds >= 0) {
@@ -99,51 +98,147 @@ $(document).ready(function () {
         
     }
 
-    function getResults() {
-        let userAnswer = [];
-        let selectedVal = "";
-        let question1 = $("input[type='radio'][name='first-name']:checked").val();
-            if(allQuestions[0].answer == question1) {
-                correctAnswer ++;
-            } else if (question1 == null) {
-                unanswered ++;
-            } else {
-                wrongAnswer ++;
-            };
-        let question2 = $("input[type='radio'][name='villian']:checked").val();
-            if(allQuestions[1].answer == question2) {
-                correctAnswer ++;
-            } else if (question2 == null) {
-                unanswered ++;
-            } else {
-                wrongAnswer ++;
-            }
-        let question3 = $("input[type='radio'][name='killed']:checked").val();
-            if(allQuestions[2].answer == question3) {
-                correctAnswer ++;
-            } else if (question3 == null) {
-                unanswered ++;
-            } else {
-                wrongAnswer ++;
-            }
-        let question4 = $("input[type='radio'][name='jack']:checked").val();
-        let question5 = $("input[type='radio'][name='chunk']:checked").val();
-        let question6 = $("input[type='radio'][name='grossing']:checked").val();
-        let question7 = $("input[type='radio'][name='keyser']:checked").val();
-        let question8 = $("input[type='radio'][name='signs']:checked").val();
-        let question9 = $("input[type='radio'][name='dude']:checked").val();
-        let question10 = $("input[type='radio'][name='edward']:checked").val();
-        allQuestions[0]
-        // print out results $("#timeRemaining").html(minutes + ":" + x); //
-    }
+    
+    
+    
+    // Answers & Results //
+    let correctAnswer = $("#correctAnswers");
+    let wrongAnswer = $("#incorrectAnswers");
+    let correctRadios = $("input:radio[value=correct]:checked").val();
+    console.log(correctRadios);
+    // if(correctRadios = correctRadios.length)
+    correctAnswer++;
+    //Checking to see if wrong radio button was clicked and incrementing wrong answers
+    let wrongRadios = $('input:radio[value=wrong]:checked').val();
+    console.log(wrongRadios);
+    // if(wrongRadios = wrongRadios.length)
+    wrongAnswer++;
 
-    // Click start button to reveal trivia questions //
+    // correctAnswer.text(correct);
+    // wrongAnswer.text(wrong);
+    // unanswered.text(unanswered);
+
+    // function getResults() {
+        // this might not be the best solution
+        // $("input[type='button']").click(function() {
+        // let userAnswer = [];
+        // let selectedVal = "";
+        // let question1 = $("input[name=results]").on("click", function(e){
+        //     e.preventDefault();
+        //     console.log($("input[name=first-name]:checked").val());
+        // });
+        // $("input[type='radio']").click(function() {
+        //     let question1 = $("input[name='first-name']:checked").val();
+        //     console.log(this.value);
+            
+        //     if(allQuestions[0].answer == question1) {
+        //         correctAnswer ++;
+        //     } else if (question1 == null) {
+        //         unanswered ++;
+        //     } else {
+        //         wrongAnswer ++;
+        //     }
+        //     console.log($("input[name='first-name']:checked").val());
+        // });
+        
+        
+        
+        //     // $("input:radio[name=first-name]")[0].checked = true;
+        //     // console.log(this.value);
+        
+            
+        // let question2 = $("input[type='radio'][name='villian']:checked").val();
+        //     if(allQuestions[1].answer == question2) {
+        //         correctAnswer ++;
+        //     } else if (question2 == null) {
+        //         unanswered ++;
+        //     } else {
+        //         wrongAnswer ++;
+        //     }
+        // let question3 = $("input[type='radio'][name='killed']:checked").val();
+        //     if(allQuestions[2].answer == question3) {
+        //         correctAnswer ++;
+        //     } else if (question3 == null) {
+        //         unanswered ++;
+        //     } else {
+        //         wrongAnswer ++;
+        //     }
+        // let question4 = $("input[type='radio'][name='jack']:checked").val();
+        //     if(allQuestions[3].answer == question4) {
+        //         correctAnswer ++;
+        //     } else if (question4 == null) {
+        //         unanswered ++;
+        //     } else {
+        //         wrongAnswer ++;
+        //     }
+        // let question5 = $("input[type='radio'][name='chunk']:checked").val();
+        //     if(allQuestions[4].answer == question5) {
+        //         correctAnswer ++;
+        //     } else if (question5 == null) {
+        //         unanswered ++;
+        //     } else {
+        //         wrongAnswer ++;
+        //     }
+        // let question6 = $("input[type='radio'][name='grossing']:checked").val();
+        //     if(allQuestions[5].answer == question6) {
+        //         correctAnswer ++;
+        //     } else if (question6 == null) {
+        //         unanswered ++;
+        //     } else {
+        //         wrongAnswer ++;
+        //     }
+        // let question7 = $("input[type='radio'][name='keyser']:checked").val();
+        //     if(allQuestions[6].answer == question7) {
+        //         correctAnswer ++;
+        //     } else if (question7 == null) {
+        //         unanswered ++;
+        //     } else {
+        //         wrongAnswer ++;
+        //     }
+        // let question8 = $("input[type='radio'][name='signs']:checked").val();
+        //     if(allQuestions[7].answer == question8) {
+        //         correctAnswer ++;
+        //     } else if (question8 == null) {
+        //         unanswered ++;
+        //     } else {
+        //         wrongAnswer ++;
+        //     }
+        // let question9 = $("input[type='radio'][name='dude']:checked").val();
+        //     if(allQuestions[8].answer == question9) {
+        //         correctAnswer ++;
+        //     } else if (question9 == null) {
+        //         unanswered ++;
+        //     } else {
+        //         wrongAnswer ++;
+        //     }
+        // let question10 = $("input[type='radio'][name='edward']:checked").val();
+        //     if(allQuestions[9].answer == question10) {
+        //         correctAnswer ++;
+        //     } else if (question10 == null) {
+        //         unanswered ++;
+        //     } else {
+        //         wrongAnswer ++;
+        //     }
+        // allQuestions[0]
+        
+        // Print out results $("#timeRemaining").html(minutes + ":" + x); //
+        // $("#correctAnswers").html(correctAnswer);
+        // $("#incorrectAnswers").html(wrongAnswer);
+        // $("#unanswered").html(unanswered);
+
+        // Click "Get Results" button to reveal results
+        // $("#submit".click(function() {
+        //     $("#results").css("display", "block");
+
+        // }));
+
+    // Click "Start" button to reveal trivia questions //
 
     $("button#startButton").click(function() {
         $("#triviaContainer").css("display", "block");
         $("button#startButton").css("display", "none");
         
-    // Create a 2 minute countdown timer //
+    // Begin timer countdown //
 
         beginTimer();
           

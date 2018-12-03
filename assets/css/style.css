@@ -48,12 +48,12 @@ h1 {
     color: #ff0080;
     margin-left: 40%;
     margin-right: 40%;
+    margin-top: 30%;
 }
 
 #beginTrivia {
-    padding-top: 25%;
+    padding-bottom: 10%;
     position: relative;
-    z-index: 1;
 }
 
 fieldset {
@@ -85,6 +85,8 @@ button {
     font-family: 'Francois One', sans-serif;
     color: #ff0080;
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    margin-left: 40%;
+    margin-right: 40%;
 }
 
 h2 {
