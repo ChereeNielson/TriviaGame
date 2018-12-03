@@ -4,7 +4,7 @@ $(document).ready(function () {
         {
             question: "What is Indiana Jones' real first name?",
             choices: ["Indy", "Junior", "Henry", "Marcus"],
-            answer: 2
+            answer: "henry"
         }, 
 
         {
@@ -101,9 +101,7 @@ $(document).ready(function () {
     
     
     // Answers & Results //
-    // let correctAnswer = $("#correctAnswers");
-    // let wrongAnswer = $("#incorrectAnswers");
-    // let unanswered = $("#unanswered");
+    
     // let correctRadios = $("input:radio[value=correct]:checked").val();
     // console.log(correctRadios);
         // if(correctRadios = correctRadios.length)
@@ -149,8 +147,7 @@ $(document).ready(function () {
 
     // Answers & Results // 
     function getResults () {
-        // let question1 = $("input[type='radio'][name=first-name]").val();
-        let question1 = $("input:radio[name=first-name]").val();
+        let question1 = $("input:radio[name=first-name]:checked").val();
         console.log(question1);
             if(allQuestions[0].answer == question1) {
                 correctAnswer ++;
@@ -159,7 +156,8 @@ $(document).ready(function () {
             } else {
                 wrongAnswer ++;
             }
-        let question2 = $("input[type='radio'][name=villian]:checked").val();
+        let question2 = $("input:radio[name=villain]:checked").val();
+        console.log(question2);
             if(allQuestions[1].answer == question2) {
                 correctAnswer ++;
             } else if (question2 == null) {
@@ -167,7 +165,8 @@ $(document).ready(function () {
             } else {
                 wrongAnswer ++;
             }
-        let question3 = $("input[type='radio'][name=killed]:checked").val();
+        let question3 = $("input:radio[name=killed]:checked").val();
+        console.log(question3);
             if(allQuestions[2].answer == question3) {
                 correctAnswer ++;
             } else if (question3 == null) {
@@ -175,7 +174,8 @@ $(document).ready(function () {
             } else {
                 wrongAnswer ++;
             }
-        let question4 = $("input[type='radio'][name=jack]:checked").val();
+        let question4 = $("input:radio[name=jack]:checked").val();
+        console.log(question4);
             if(allQuestions[3].answer == question4) {
                 correctAnswer ++;
             } else if (question4 == null) {
@@ -183,7 +183,8 @@ $(document).ready(function () {
             } else {
                 wrongAnswer ++;
             }
-        let question5 = $("input[type='radio'][name=chunk]:checked").val();
+        let question5 = $("input:radio[name=chunk]:checked").val();
+        console.log(question5);
             if(allQuestions[4].answer == question5) {
                 correctAnswer ++;
             } else if (question5 == null) {
@@ -191,7 +192,8 @@ $(document).ready(function () {
             } else {
                 wrongAnswer ++;
             }
-        let question6 = $("input[type='radio'][name=grossing]:checked").val();
+        let question6 = $("input:radio[name=grossing]:checked").val();
+        console.log(question6);
             if(allQuestions[5].answer == question6) {
                 correctAnswer ++;
             } else if (question6 == null) {
@@ -199,7 +201,8 @@ $(document).ready(function () {
             } else {
                 wrongAnswer ++;
             }
-        let question7 = $("input[type='radio'][name=keyser]:checked").val();
+        let question7 = $("input:radio[name=keyser]:checked").val();
+        console.log(question7);
             if(allQuestions[6].answer == question7) {
                 correctAnswer ++;
             } else if (question7 == null) {
@@ -207,7 +210,8 @@ $(document).ready(function () {
             } else {
                 wrongAnswer ++;
             }
-        let question8 = $("input[type='radio'][name=signs]:checked").val();
+        let question8 = $("input:radio[name=signs]:checked").val();
+        console.log(question8);
             if(allQuestions[7].answer == question8) {
                 correctAnswer ++;
             } else if (question8 == null) {
@@ -215,7 +219,8 @@ $(document).ready(function () {
             } else {
                 wrongAnswer ++;
             }
-        let question9 = $("input[type='radio'][name=dude]:checked").val();
+        let question9 = $("input:radio[name=dude]:checked").val();
+        console.log(question9);
             if(allQuestions[8].answer == question9) {
                 correctAnswer ++;
             } else if (question9 == null) {
@@ -223,7 +228,8 @@ $(document).ready(function () {
             } else {
                 wrongAnswer ++;
             }
-        let question10 = $("input[type='radio'][name=edward]:checked").val();
+        let question10 = $("input:radio[name=edward]:checked").val();
+        console.log(question10);
             if(allQuestions[9].answer == question10) {
                 correctAnswer ++;
             } else if (question10 == null) {
