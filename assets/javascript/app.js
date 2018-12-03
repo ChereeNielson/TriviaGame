@@ -67,7 +67,7 @@ $(document).ready(function () {
     // let start = $("#startButton");
     // let timer = $("#timeRemaining")
     // let submit = $("#submit");
-    // // let restart = $("#buttonRestart");
+    // let restart = $("#buttonRestart");
     // let questions = $("#question")
     // let results = $("#results")
     // let quiz = $("#triviaContainer")
@@ -109,7 +109,7 @@ $(document).ready(function () {
     // if(correctRadios = correctRadios.length)
     correctAnswer++;
     //Checking to see if wrong radio button was clicked and incrementing wrong answers
-    let wrongRadios = $('input:radio[value=wrong]:checked').val();
+    let wrongRadios = $("input:radio[value=wrong]:checked").val();
     console.log(wrongRadios);
     // if(wrongRadios = wrongRadios.length)
     wrongAnswer++;
@@ -118,9 +118,10 @@ $(document).ready(function () {
     // wrongAnswer.text(wrong);
     // unanswered.text(unanswered);
 
-    // function getResults() {
-        // this might not be the best solution
-        // $("input[type='button']").click(function() {
+    
+    // To display the selected radio button value 
+    // $("input:radio[name=first-name]:checked").val();
+
         // let userAnswer = [];
         // let selectedVal = "";
         // let question1 = $("input[name=results]").on("click", function(e){
@@ -221,26 +222,25 @@ $(document).ready(function () {
         //     }
         // allQuestions[0]
         
-        // Print out results $("#timeRemaining").html(minutes + ":" + x); //
-        // $("#correctAnswers").html(correctAnswer);
-        // $("#incorrectAnswers").html(wrongAnswer);
-        // $("#unanswered").html(unanswered);
+        
+        
 
-        // Click "Get Results" button to reveal results
-        // $("#submit".click(function() {
-        //     $("#results").css("display", "block");
-
-        // }));
+    // Click "Get Results" button to reveal results //
+    $("button#submit").click(function() {
+        $("#results").css("display", "block");
+        $("button#submit").css("display", "none");
+        $("#triviaContainer").css("display", "none");
+        $("#correctAnswers").html(correctAnswer);
+        $("#incorrectAnswers").html(wrongAnswer);
+        $("#unanswered").html(unanswered);
+    });
 
     // Click "Start" button to reveal trivia questions //
-
     $("button#startButton").click(function() {
         $("#triviaContainer").css("display", "block");
         $("button#startButton").css("display", "none");
         
-    // Begin timer countdown //
-
-        beginTimer();
-          
+        // Begin timer countdown //
+        beginTimer();   
     });
 });
