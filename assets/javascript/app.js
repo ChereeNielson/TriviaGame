@@ -112,7 +112,6 @@ $(document).ready(function () {
             } else {
                 wrongAnswer++;
             }
-            $("#submit").text(question1);
         let question2 = $("input:radio[name=villain]:checked").val();
         console.log(question2);
             if(allQuestions[1].answer == question2) {
