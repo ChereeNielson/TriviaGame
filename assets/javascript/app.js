@@ -98,144 +98,101 @@ $(document).ready(function () {
     let correctAnswer = 0;
     let wrongAnswer = 0;
     let unanswered = 0;
-    
-    
-    // Answers & Results //
-    
-    // let correctRadios = $("input:radio[value=correct]:checked").val();
-    // console.log(correctRadios);
-        // if(correctRadios = correctRadios.length)
-    // correctAnswer++;
-        //Checking to see if wrong radio button was clicked and incrementing wrong answers
-    // let wrongRadios = $("input:radio[value=wrong]:checked").val();
-    // console.log(wrongRadios);
-        // if(wrongRadios = wrongRadios.length)
-    // wrongAnswer++;
-
-    // correctAnswer.text(correct);
-    // wrongAnswer.text(wrong);
-    // unanswered.text(unanswered);
-
-    
-    // To display the selected radio button value 
-    // $("input:radio[name=first-name]:checked").val();
-
-        // let userAnswer = [];
-        // let selectedVal = "";
-    // let question1 = $("input[name=results]").on("click", function(e){
-    //     e.preventDefault();
-    //     console.log($("input[name=first-name]:checked").val());
-    // });
-        // $("input[type='radio']").click(function() {
-        //     let question1 = $("input[name='first-name']:checked").val();
-        //     console.log(this.value);
             
-        //     if(allQuestions[0].answer == question1) {
-        //         correctAnswer ++;
-        //     } else if (question1 == null) {
-        //         unanswered ++;
-        //     } else {
-        //         wrongAnswer ++;
-        //     }
-        //     console.log($("input[name='first-name']:checked").val());
-        // });
-        
-        
-        
-        //     // $("input:radio[name=first-name]")[0].checked = true;
-        //     // console.log(this.value);
 
     // Answers & Results // 
     function getResults () {
         let question1 = $("input:radio[name=first-name]:checked").val();
+        console.log(allQuestions[0].answer);
         console.log(question1);
             if(allQuestions[0].answer == question1) {
-                correctAnswer ++;
+                correctAnswer++;
             } else if (question1 == null) {
-                unanswered ++;
+                unanswered++;
             } else {
-                wrongAnswer ++;
+                wrongAnswer++;
             }
+            $("#submit").text(question1);
         let question2 = $("input:radio[name=villain]:checked").val();
         console.log(question2);
             if(allQuestions[1].answer == question2) {
-                correctAnswer ++;
+                correctAnswer++;
             } else if (question2 == null) {
-                unanswered ++;
+                unanswered++;
             } else {
-                wrongAnswer ++;
+                wrongAnswer++;
             }
         let question3 = $("input:radio[name=killed]:checked").val();
         console.log(question3);
             if(allQuestions[2].answer == question3) {
-                correctAnswer ++;
+                correctAnswer++;
             } else if (question3 == null) {
-                unanswered ++;
+                unanswered++;
             } else {
-                wrongAnswer ++;
+                wrongAnswer++;
             }
         let question4 = $("input:radio[name=jack]:checked").val();
         console.log(question4);
             if(allQuestions[3].answer == question4) {
-                correctAnswer ++;
+                correctAnswer++;
             } else if (question4 == null) {
-                unanswered ++;
+                unanswered++;
             } else {
-                wrongAnswer ++;
+                wrongAnswer++;
             }
         let question5 = $("input:radio[name=chunk]:checked").val();
         console.log(question5);
             if(allQuestions[4].answer == question5) {
-                correctAnswer ++;
+                correctAnswer++;
             } else if (question5 == null) {
-                unanswered ++;
+                unanswered++;
             } else {
-                wrongAnswer ++;
+                wrongAnswer++;
             }
         let question6 = $("input:radio[name=grossing]:checked").val();
         console.log(question6);
             if(allQuestions[5].answer == question6) {
-                correctAnswer ++;
+                correctAnswer++;
             } else if (question6 == null) {
-                unanswered ++;
+                unanswered++;
             } else {
-                wrongAnswer ++;
+                wrongAnswer++;
             }
         let question7 = $("input:radio[name=keyser]:checked").val();
         console.log(question7);
             if(allQuestions[6].answer == question7) {
-                correctAnswer ++;
+                correctAnswer++;
             } else if (question7 == null) {
-                unanswered ++;
+                unanswered++;
             } else {
-                wrongAnswer ++;
+                wrongAnswer++;
             }
         let question8 = $("input:radio[name=signs]:checked").val();
         console.log(question8);
             if(allQuestions[7].answer == question8) {
-                correctAnswer ++;
+                correctAnswer++;
             } else if (question8 == null) {
-                unanswered ++;
+                unanswered++;
             } else {
-                wrongAnswer ++;
+                wrongAnswer++;
             }
         let question9 = $("input:radio[name=dude]:checked").val();
         console.log(question9);
             if(allQuestions[8].answer == question9) {
-                correctAnswer ++;
+                correctAnswer++;
             } else if (question9 == null) {
-                unanswered ++;
+                unanswered++;
             } else {
-                wrongAnswer ++;
+                wrongAnswer++;
             }
         let question10 = $("input:radio[name=edward]:checked").val();
         console.log(question10);
             if(allQuestions[9].answer == question10) {
-                correctAnswer ++;
+                correctAnswer++;
             } else if (question10 == null) {
-                unanswered ++;
+                unanswered++;
             } else {
-                wrongAnswer ++;
+                wrongAnswer++;
             }
         
         allQuestions[0]
@@ -244,13 +201,13 @@ $(document).ready(function () {
         
     // Click "Get Results" button to reveal results //
     $("button#submit").click(function() {
+        getResults();
         $("#results").css("display", "block");
         $("button#submit").css("display", "none");
         $("#triviaContainer").css("display", "none");
         $("#correctAnswers").html(correctAnswer);
         $("#incorrectAnswers").html(wrongAnswer);
-        $("#unanswered").html(unanswered);
-        getResults();
+        $("#unanswered").html(unanswered); 
     });
 
     // Click "Start" button to reveal trivia questions //
